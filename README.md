@@ -17,15 +17,15 @@ Option B:
 1. Search for `cmd` and run as an admin
 2. List installed Distros
   ```
-    wsl --list
+  wsl --list
   ```
 3. Unregister Ubuntu:
   ```
-    wsl --unregister Ubuntu
+  wsl --unregister Ubuntu
   ```
 4. Reinstall Ubuntu:
   ```
-    wsl -install -d Ubuntu 
+  wsl -install -d Ubuntu 
   ```
 
 ## Install MicroK8s on Linux
@@ -59,4 +59,31 @@ Follow this instructions here: https://ubuntu.com/kubernetes/install
 5. Apply the changes
   ```
   source ~/.bashrc
+  ```
+
+## Install EasyTrade on Kubernetes
+
+Follow the instruction from here: https://github.com/Dynatrace/easytrade/
+
+### Short summary on how to install
+1. Install `git`
+  ```
+  sudo apt-get update
+  sudo apt-get install git
+  git --version
+  ```
+3. Clone the GitHub repo
+  ```
+  git clone https://github.com/Dynatrace/easytrade.git
+  ```
+3. Create namespace
+  ```
+  k create namespace easytrade
+  ```
+4. Apply manifest files
+  ```
+  k -n easytrade apply -f easytrade/kubernetes-manifests
+
+  # Optional: to auto create problem patterns once a day
+  k -n easytrade apply -f easytrade/kubernetes-manifests/problem-patterns
   ```
