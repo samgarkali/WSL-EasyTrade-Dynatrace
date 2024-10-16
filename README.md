@@ -4,7 +4,7 @@ Instruction on how to install WSL -> Micro k8 -> EasyTrade -> Dynatrace Operator
 ----
 ## Install WSL on Windows OS
 
-1. https://learn.microsoft.com/en-us/windows/wsl/install
+To install WSL follow this documentation: https://learn.microsoft.com/en-us/windows/wsl/install
 
 ### To reset WSL configurations
 
@@ -26,4 +26,37 @@ Option B:
 4. Reinstall Ubuntu:
   ```
     wsl -install -d Ubuntu 
+  ```
+
+## Install MicroK8s on Linux
+
+Follow this instructions here: https://ubuntu.com/kubernetes/install
+
+### Useful commands
+
+* To access Kubernetes Dashboard
+  ```
+  microk8s dashboard-proxy
+  ```
+* Start and stop Kubernetes to save battery
+  ```
+  microk8s start/stop
+  ```
+
+### To create alias to replace `microk8s kubectl` with shortkey (`k` in this example)
+1. Open the terminal
+2. Open the `.bashrc` file
+  ```
+  nano ~/.bashrc
+  ```
+3. Add the alias to the end of the file
+  ```
+  alias k='microk8s kubectl'
+  ```
+4. Save and exit
+    - `CTRL + S` - to save
+    - `CTRL + X` - to exit
+5. Apply the changes
+  ```
+  source ~/.bashrc
   ```
