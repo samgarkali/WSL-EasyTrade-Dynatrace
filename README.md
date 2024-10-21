@@ -33,6 +33,14 @@ Option B:
 Follow this instructions here: [https://ubuntu.com/kubernetes/install](https://minikube.sigs.k8s.io/docs/start/?arch=%2Flinux%2Fx86-64%2Fstable%2Fbinary+download)
 
 
+### Useful commands
+```
+minikube dashboard
+
+minikube pause/unpause/stop
+```
+
+
 ### To create alias to replace `minikube kubectl` with shorter version (`k` in this example)
 1. Open the terminal
 2. Open the `.bashrc` file
