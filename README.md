@@ -41,7 +41,7 @@ Follow this instructions here: [https://ubuntu.com/kubernetes/install](https://m
   ```
 3. Add the alias to the end of the file
   ```
-  alias k='minikube kubectl'
+  alias k='minikube kubectl --'
   ```
 4. Save and exit
     - `CTRL + S` - to save
