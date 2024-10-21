@@ -32,18 +32,8 @@ Option B:
 
 Follow this instructions here: [https://ubuntu.com/kubernetes/install](https://minikube.sigs.k8s.io/docs/start/?arch=%2Flinux%2Fx86-64%2Fstable%2Fbinary+download)
 
-### Useful commands
 
-* To access Kubernetes Dashboard
-  ```
-  microk8s dashboard-proxy
-  ```
-* Start and stop Kubernetes to save battery
-  ```
-  microk8s start/stop
-  ```
-
-### To create alias to replace `microk8s kubectl` with shortkey (`k` in this example)
+### To create alias to replace `minikube kubectl` with shorter version (`k` in this example)
 1. Open the terminal
 2. Open the `.bashrc` file
   ```
@@ -51,7 +41,7 @@ Follow this instructions here: [https://ubuntu.com/kubernetes/install](https://m
   ```
 3. Add the alias to the end of the file
   ```
-  alias k='microk8s kubectl'
+  alias k='minikube kubectl'
   ```
 4. Save and exit
     - `CTRL + S` - to save
