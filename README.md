@@ -28,9 +28,9 @@ Option B:
   wsl -install -d Ubuntu 
   ```
 
-## Install MicroK8s on Linux
+## Install MiniKube on Linux
 
-Follow this instructions here: https://ubuntu.com/kubernetes/install
+Follow this instructions here: [https://ubuntu.com/kubernetes/install](https://minikube.sigs.k8s.io/docs/start/?arch=%2Flinux%2Fx86-64%2Fstable%2Fbinary+download)
 
 ### Useful commands
 
