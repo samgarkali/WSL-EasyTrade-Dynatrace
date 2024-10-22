@@ -85,3 +85,10 @@ Follow the instruction from here: https://github.com/Dynatrace/easytrade/
   # Optional: to auto create problem patterns once a day
   k -n easytrade apply -f easytrade/kubernetes-manifests/problem-patterns
   ```
+
+
+### Useful commands
+* To access the easytrade frontend
+```
+minikube service frontendreverseproxy-easytrade -n easytrade
+```
