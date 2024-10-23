@@ -29,7 +29,7 @@ Option B:
   ```
 
 ### To disable WSL password
-1. In wsl add *your username* to a sudo config file
+1. In wsl add **your username** to a sudo config file
   ```
   sudo nano /etc/sudoers.d/MY_USERNAME
   ```
