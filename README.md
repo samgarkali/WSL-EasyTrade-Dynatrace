@@ -25,7 +25,7 @@ Option B:
   ```
 4. Reinstall Ubuntu:
   ```
-  wsl -install -d Ubuntu 
+  wsl --install -d Ubuntu 
   ```
 
 ## Install MiniKube on Linux
