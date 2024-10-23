@@ -28,6 +28,16 @@ Option B:
   wsl --install -d Ubuntu 
   ```
 
+### To disable WSL password
+1. In wsl add *your username* to a sudo config file
+  ```
+  sudo nano /etc/sudoers.d/MY_USERNAME
+  ```
+2. Add the following line
+  ```
+  MY_USERNAME ALL=(ALL) NOPASSWD:ALL
+  ```
+
 ## Install MiniKube on Linux
 
 Follow this instructions here: [https://ubuntu.com/kubernetes/install](https://minikube.sigs.k8s.io/docs/start/?arch=%2Flinux%2Fx86-64%2Fstable%2Fbinary+download)
