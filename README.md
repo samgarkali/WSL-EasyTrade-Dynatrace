@@ -41,6 +41,7 @@ Option B:
 ## Install MiniKube on Linux
 
 Follow this instructions here: [https://ubuntu.com/kubernetes/install](https://minikube.sigs.k8s.io/docs/start/?arch=%2Flinux%2Fx86-64%2Fstable%2Fbinary+download)
+
 **Make sure to have Docker installed**
 
 ### Useful commands
