@@ -42,6 +42,12 @@ Option B:
 
 Follow this instructions here: https://docs.docker.com/engine/install/ubuntu/
 
+### Useful commands
+* Add your user to the **docker** group
+```
+sudo usermod -aG docker $USER && newgrp docker
+```
+
 
 ## Install MiniKube on Linux
 
