@@ -38,11 +38,14 @@ Option B:
   MY_USERNAME ALL=(ALL) NOPASSWD:ALL
   ```
 
+## Install Docker components (need for minikube)
+
+Follow this instructions here: https://docs.docker.com/engine/install/ubuntu/
+
+
 ## Install MiniKube on Linux
 
 Follow this instructions here: [https://ubuntu.com/kubernetes/install](https://minikube.sigs.k8s.io/docs/start/?arch=%2Flinux%2Fx86-64%2Fstable%2Fbinary+download)
-
-**Make sure to have Docker installed**
 
 ### Useful commands
 ```
