@@ -41,6 +41,11 @@ Option B:
   ```
 
 
+### Useful commands
+1. Copy file from WSL to Windows
+  ```
+  cp /home/john/wsl-file.txt /mnt/c/Users/your_username/Downloads  
+  ```
 
 ## Install K3s
 
@@ -158,4 +163,4 @@ Follow the instruction from here: https://github.com/Dynatrace/easytrade/
   ```
   kubectl port-forward --address 0.0.0.0 service/frontendreverseproxy-easytrade 8080:80 -n easytrade
   ```
-2. After running the port-forward command, you can access the service from your browser or any other client using `http://localhost:8080`
+2. After running the port-forward command, you can access the service from your browser or any other client using [http://localhost:8080](http://localhost:8080)
