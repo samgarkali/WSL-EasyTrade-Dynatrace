@@ -96,6 +96,8 @@ Follow the instructions from here: https://docs.dynatrace.com/docs/shortlink/ins
 
 Follow the instruction from here: https://github.com/Dynatrace/easytrade/
 
+Make sure to check following issue with the `rabbitmq.yaml`: https://github.com/Dynatrace/easytrade/issues/23
+
 
 ### Short summary on how to install
 1. Install `git`
@@ -122,8 +124,4 @@ Follow the instruction from here: https://github.com/Dynatrace/easytrade/
   ```
 
 
-### Useful commands
-* To access the easytrade frontend
-```
-minikube service frontendreverseproxy-easytrade -n easytrade
-```
+### 
