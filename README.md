@@ -52,7 +52,7 @@ curl -sfL https://get.k3s.io | sh -
 sudo k3s kubectl get nodes
 ```
 
-### To run k3s command without sudo
+### To run k3s commands without sudo
 1. Change the permissions of the K3s configuration file
 ```
 sudo chmod 644 /etc/rancher/k3s/k3s.yaml
