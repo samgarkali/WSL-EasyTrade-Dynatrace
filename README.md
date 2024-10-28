@@ -38,46 +38,29 @@ Option B:
   MY_USERNAME ALL=(ALL) NOPASSWD:ALL
   ```
 
-## Install Docker components (need for minikube)
+## Install K3s
 
-Follow this instructions here: https://docs.docker.com/engine/install/ubuntu/
+Follow the instructions from here: https://docs.k3s.io/quick-start
 
-### Useful commands
-* Add your user to the **docker** group
+### Steps to follow
+1. Run the installation script
 ```
-sudo usermod -aG docker $USER && newgrp docker
+curl -sfL https://get.k3s.io | sh -
 ```
-
-
-## Install MiniKube on Linux
-
-Follow this instructions here: [https://ubuntu.com/kubernetes/install](https://minikube.sigs.k8s.io/docs/start/?arch=%2Flinux%2Fx86-64%2Fstable%2Fbinary+download)
-
-### Useful commands
+2. Verrify the installation
 ```
-minikube dashboard
-
-minikube pause/unpause/stop
+sudo k3s kubectl get nodes
 ```
 
-
-### To create alias to replace `minikube kubectl` with shorter version (`k` in this example)
-1. Open the terminal
-2. Open the `.bashrc` file
-  ```
-  nano ~/.bashrc
-  ```
-3. Add the alias to the end of the file
-  ```
-  alias k='minikube kubectl --'
-  ```
-4. Save and exit
-    - `CTRL + S` - to save
-    - `CTRL + X` - to exit
-5. Apply the changes
-  ```
-  source ~/.bashrc
-  ```
+### To run k3s command without sudo
+1. Change the permissions of the K3s configuration file
+```
+sudo chmod 644 /etc/rancher/k3s/k3s.yaml
+```
+2. Set the `KUBECONFIG` environment variable
+```
+export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+```
 
 ## Install EasyTrade on Kubernetes
 
