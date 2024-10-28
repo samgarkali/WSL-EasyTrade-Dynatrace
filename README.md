@@ -1,5 +1,5 @@
 # WSL-EasyTrade-Dynatrace
-Instruction on how to install WSL -> Micro k8 -> EasyTrade -> Dynatrace Operator
+Instruction on how to install WSL -> K3s -> Dynatrace Operator -> EasyTrade
 
 ----
 ## Install WSL on Windows OS
