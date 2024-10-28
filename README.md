@@ -69,7 +69,7 @@ Follow the instructions from here: https://docs.k3s.io/quick-start
   ```
 
 
-### (Optional) to add shortkey/alias
+### (Optional) To add shortkey/alias
 1. Open the `bashrc` file
   ```
   nano ~/.bashrc
@@ -113,7 +113,7 @@ Follow the instructions from here: https://docs.dynatrace.com/docs/shortlink/ins
   ```
   kubectl apply -f <your-DynaKube-CR>.yaml
   ```
-6. (Optional) Verify that your DynaKube is running and all pods in your Dynatrace namespace are running and ready.
+6. **(Optional)** Verify that your DynaKube is running and all pods in your Dynatrace namespace are running and ready.
   ```
   kubectl get dynakube -n dynatrace
   kubectl get pods -n dynatrace
@@ -147,7 +147,7 @@ Follow the instruction from here: https://github.com/Dynatrace/easytrade/
   ```
   kubectl -n easytrade apply -f easytrade/kubernetes-manifests
   ```
-5. (Optional) To auto create problem patterns once a day
+5. **(Optional)** To auto create problem patterns once a day
   ```
   kubectl -n easytrade apply -f easytrade/kubernetes-manifests/problem-patterns
   ```
