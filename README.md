@@ -110,14 +110,14 @@ Follow the instruction from here: https://github.com/Dynatrace/easytrade/
   ```
 3. Create namespace
   ```
-  k create namespace easytrade
+  kubectl create namespace easytrade
   ```
 4. Apply manifest files
   ```
-  k -n easytrade apply -f easytrade/kubernetes-manifests
+  kubectl -n easytrade apply -f easytrade/kubernetes-manifests
 
   # Optional: to auto create problem patterns once a day
-  k -n easytrade apply -f easytrade/kubernetes-manifests/problem-patterns
+  kubectl -n easytrade apply -f easytrade/kubernetes-manifests/problem-patterns
   ```
 
 
