@@ -96,7 +96,7 @@ Follow the instructions from here: https://docs.dynatrace.com/docs/shortlink/ins
 
 Follow the instruction from here: https://github.com/Dynatrace/easytrade/
 
-Make sure to check following issue with the `rabbitmq.yaml`: https://github.com/Dynatrace/easytrade/issues/23
+**Note:** Make sure to check following issue with the `rabbitmq.yaml`: https://github.com/Dynatrace/easytrade/issues/23
 
 
 ### Short summary on how to install
@@ -124,4 +124,9 @@ Make sure to check following issue with the `rabbitmq.yaml`: https://github.com/
   ```
 
 
-### 
+### Useful commands
+1. This command forwards port 80 of the `frontendreverseproxy-easytrade` service to port 8080 on your localhost
+  ```
+  kubectl port-forward --address 0.0.0.0 service/frontendreverseproxy-easytrade 8080:80 -n easytrade
+  ```
+2. After running the port-forward command, you can access the service from your browser or any other client using `http://localhost:8080`
