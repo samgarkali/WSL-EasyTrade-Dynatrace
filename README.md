@@ -91,6 +91,35 @@ Follow the instructions from here: https://docs.k3s.io/quick-start
 Follow the instructions from here: https://docs.dynatrace.com/docs/shortlink/installation-k8s-cloud-native-fs#manifest
 
 
+### Steps to follow
+1. Create a dynatrace namespace
+  ```
+  kubectl create namespace dynatrace
+  ```
+2. Install Dynatrace Operator
+  ```
+  kubectl apply -f https://github.com/Dynatrace/dynatrace-operator/releases/download/v1.3.2/kubernetes.yaml
+  kubectl apply -f https://github.com/Dynatrace/dynatrace-operator/releases/download/v1.3.2/kubernetes-csi.yaml
+  ```
+3. Run the following command to see when Dynatrace Operator components finish initialization:
+  ```
+  kubectl -n dynatrace wait pod --for=condition=ready --selector=app.kubernetes.io/name=dynatrace-operator,app.kubernetes.io/component=webhook --timeout=300s
+  ```
+4. Create secret for Access tokens named dynakube for the Dynatrace Operator token and data ingest token obtained in Tokens and permissions required.
+  ```
+  kubectl -n dynatrace create secret generic dynakube --from-literal="apiToken=<OPERATOR_TOKEN>" --from-literal="dataIngestToken=<DATA_INGEST_TOKEN>"
+  ```
+5. Apply the DynaKube custom resource
+  ```
+  kubectl apply -f <your-DynaKube-CR>.yaml
+  ```
+6. (Optional) Verify that your DynaKube is running and all pods in your Dynatrace namespace are running and ready.
+  ```
+  kubectl get dynakube -n dynatrace
+  kubectl get pods -n dynatrace
+  ```
+
+
 
 ## Install EasyTrade on Kubernetes
 
@@ -99,7 +128,7 @@ Follow the instruction from here: https://github.com/Dynatrace/easytrade/
 **Note:** Make sure to check following issue with the `rabbitmq.yaml`: https://github.com/Dynatrace/easytrade/issues/23
 
 
-### Short summary on how to install
+### Steps to follow
 1. Install `git`
   ```
   sudo apt-get update
