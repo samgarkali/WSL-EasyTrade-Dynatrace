@@ -49,40 +49,40 @@ Follow the instructions from here: https://docs.k3s.io/quick-start
 
 ### Steps to follow
 1. Run the installation script
-```
-curl -sfL https://get.k3s.io | sh -
-```
+  ```
+  curl -sfL https://get.k3s.io | sh -
+  ```
 2. Verrify the installation
-```
-sudo k3s kubectl get nodes
-```
+  ```
+  sudo k3s kubectl get nodes
+  ```
 
 
 ### To run k3s commands without sudo
 1. Change the permissions of the K3s configuration file
-```
-sudo chmod 644 /etc/rancher/k3s/k3s.yaml
-```
+  ```
+  sudo chmod 644 /etc/rancher/k3s/k3s.yaml
+  ```
 2. Set the `KUBECONFIG` environment variable
-```
-export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
-```
+  ```
+  export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+  ```
 
 
 ### (Optional) to add shortkey/alias
 1. Open the `bashrc` file
-```
-nano ~/.bashrc
-```
+  ```
+  nano ~/.bashrc
+  ```
 2. Add your alias
-```
-alias alias_name='command_to_run'
-```
+  ```
+  alias alias_name='command_to_run'
+  ```
 3. Save and exit
 4. Apply the changes
-```
-source ~/.bashrc
-```
+  ```
+  source ~/.bashrc
+  ```
 
 
 
@@ -115,8 +115,9 @@ Follow the instruction from here: https://github.com/Dynatrace/easytrade/
 4. Apply manifest files
   ```
   kubectl -n easytrade apply -f easytrade/kubernetes-manifests
-
-  # Optional: to auto create problem patterns once a day
+  ```
+5. (Optional) To auto create problem patterns once a day
+  ```
   kubectl -n easytrade apply -f easytrade/kubernetes-manifests/problem-patterns
   ```
 
