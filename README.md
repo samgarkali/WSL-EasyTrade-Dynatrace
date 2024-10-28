@@ -69,6 +69,22 @@ export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 ```
 
 
+### (Optional) to add shortkey/alias
+1. Open the `bashrc` file
+```
+nano ~/.bashrc
+```
+2. Add your alias
+```
+alias alias_name='command_to_run'
+```
+3. Save and exit
+4. Apply the changes
+```
+source ~/.bashrc
+```
+
+
 
 ## Install Dynatrace Operator
 
