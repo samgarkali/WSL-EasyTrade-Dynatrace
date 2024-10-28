@@ -47,6 +47,8 @@ Option B:
   cp /home/john/wsl-file.txt /mnt/c/Users/your_username/Downloads  
   ```
 
+
+
 ## Install K3s
 
 Follow the instructions from here: https://docs.k3s.io/quick-start
