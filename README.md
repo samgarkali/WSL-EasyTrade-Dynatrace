@@ -1,6 +1,11 @@
 # WSL-EasyTrade-Dynatrace
 Instruction on how to install WSL -> K3s -> Dynatrace Operator -> EasyTrade
 
+## Links
+1. [Install WSL on Windows OS](#install-wsl-on-windows-os)
+2. [Install K3s](#install-k3s)
+3. [Install Dynatrace Operator](#install-dynatrace-operator)
+4. [Install EasyTrade](#install-easytrade)
 ----
 ## Install WSL on Windows OS
 
@@ -128,7 +133,7 @@ Follow the instructions from here: https://docs.dynatrace.com/docs/shortlink/ins
 
 
 
-## Install EasyTrade on Kubernetes
+## Install EasyTrade
 
 Follow the instruction from here: https://github.com/Dynatrace/easytrade/
 
