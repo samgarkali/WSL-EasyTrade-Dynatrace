@@ -6,6 +6,7 @@ Instruction on how to install WSL -> Micro k8 -> EasyTrade -> Dynatrace Operator
 
 To install WSL follow this documentation: https://learn.microsoft.com/en-us/windows/wsl/install
 
+
 ### To reset WSL configurations
 
 Option A:
@@ -28,6 +29,7 @@ Option B:
   wsl --install -d Ubuntu 
   ```
 
+
 ### To disable WSL password
 1. In wsl add **your username** to a sudo config file
   ```
@@ -38,9 +40,12 @@ Option B:
   MY_USERNAME ALL=(ALL) NOPASSWD:ALL
   ```
 
+
+
 ## Install K3s
 
 Follow the instructions from here: https://docs.k3s.io/quick-start
+
 
 ### Steps to follow
 1. Run the installation script
@@ -52,6 +57,7 @@ curl -sfL https://get.k3s.io | sh -
 sudo k3s kubectl get nodes
 ```
 
+
 ### To run k3s commands without sudo
 1. Change the permissions of the K3s configuration file
 ```
@@ -62,9 +68,18 @@ sudo chmod 644 /etc/rancher/k3s/k3s.yaml
 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 ```
 
+
+
+## Install Dynatrace Operator
+
+Follow the instructions from here: https://docs.dynatrace.com/docs/shortlink/installation-k8s-cloud-native-fs#manifest
+
+
+
 ## Install EasyTrade on Kubernetes
 
 Follow the instruction from here: https://github.com/Dynatrace/easytrade/
+
 
 ### Short summary on how to install
 1. Install `git`
