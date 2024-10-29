@@ -71,7 +71,7 @@ Follow the instructions from here: https://docs.k3s.io/quick-start
 
 
 ### To run k3s commands without sudo
-#### (Recommended) Copy the config locally
+#### (Recommended) Assigning full kubectl permissions to your non-root user in a UNIX-safe way
 1. Set up an environmental variable and generate new file
   ```
   export KUBECONFIG=~/.kube/config
