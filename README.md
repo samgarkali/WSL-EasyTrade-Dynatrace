@@ -71,6 +71,31 @@ Follow the instructions from here: https://docs.k3s.io/quick-start
 
 
 ### To run k3s commands without sudo
+#### (Recommended) Copy the config locally
+1. Set up an environmental variable and generate new file
+  ```
+  export KUBECONFIG=~/.kube/config
+  ```
+2. Run the following command
+  ```
+  mkdir ~/.kube 2> /dev/null
+  sudo k3s kubectl config view --raw > "$KUBECONFIG"
+  chmod 600 "$KUBECONFIG"
+  ```
+3. To add `KUBECONFIG=~/.kube/config` to your `~/.bashrc` to make it persist on reboot
+  ```
+  echo 'export KUBECONFIG=~/.kube/config' >> ~/.bashrc
+  ```
+4. Apply changes
+  ```
+  source ~/.bashrc
+  ```
+5. Restart WSL to apply all changes in **Command Prompt**
+  ```
+  echo 'export KUBECONFIG=~/.kube/config' >> ~/.bashrc
+  ```
+
+#### (Not Recommended) Changing the permissions of `/etc/rancher/k3s/k3s.yaml`
 1. Change the permissions of the K3s configuration file
   ```
   sudo chmod 644 /etc/rancher/k3s/k3s.yaml
