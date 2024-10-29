@@ -97,6 +97,35 @@ Follow the instructions from here: https://docs.k3s.io/quick-start
   ```
 
 
+### To start `k3s` automatically when running WSL
+1. Create a startup script: Create a script file, for example, start-k3s.sh, in your home directory:
+  ```
+  nano ~/start-k3s.sh
+  ```
+2. Add the command to start k3s: Add the following line to the script:
+  ```
+  sudo systemctl start k3s
+  ```
+3. Make the script executable:
+  ```
+  chmod +x ~/start-k3s.sh
+  ```
+4. Configure WSL to run the script on startup: Edit the WSL configuration file /etc/wsl.conf (create it if it doesn’t exist):
+  ```
+  sudo nano /etc/wsl.conf
+  ```
+5. Add the following lines to the file:
+  ```
+  [boot]
+  command="sh /home/your-username/start-k3s.sh"
+  ```
+6. Restart WSL: Close your WSL terminal and run the following command in **Command Prompt** or **PowerShell**
+  ```
+  wsl --shutdown
+  ```
+7. Open the WSL. The k3s service should start automatically.
+
+
 
 ## Install Dynatrace Operator
 
